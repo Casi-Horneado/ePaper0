@@ -4,9 +4,11 @@ this project is absolutely not complete.
 
 # Materials
 
-a. Raspberry Pi Zero WH (1st gen.)
-b. Waveshare e-ink display (7.5inches - V2 - "old")
-c. Corresponding Waveshare e-ink driver board
+1. Raspberry Pi Zero WH (1st gen.)
+
+2. Waveshare e-ink display (7.5inches - V2 - "old")
+
+3. Corresponding Waveshare e-ink driver board
 
 # Instructions
 
@@ -33,9 +35,4 @@ c. Corresponding Waveshare e-ink driver board
 
 2. download from GH & setup Rpi
 
-mkdir projects && \\
-    cd projects && \\
-    git clone https://github.com/Casi-Horneado/ePaper0.git && \\
-    cd ePaper && \\
-    sh setup.sh
-
+`sh setup.sh`
