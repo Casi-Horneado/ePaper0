@@ -33,6 +33,20 @@ this project is absolutely not complete.
 
 1. ssh into RP0WH
 
-2. download from GH & setup Rpi
+2. use this setup.sh file `sh setup.sh`
 
-`sh setup.sh`
+```
+#! /bin/bash
+sudo apt update
+sudo apt upgrade
+sudo apt install -y git
+mkdir projects && \
+    cd projects && \
+    git clone https://github.com/Casi-Horneado/ePaper0.git && \
+    cd ePaper0 && \
+    python -m venv ePaper-venv
+
+sudo sed -i.bak 's/#dtparam=spi=on/dtparam=spi=on/g' /boot/firmware/config.txt
+# remove -i.bak to not backup config (in the same folder)
+sudo reboot
+```
