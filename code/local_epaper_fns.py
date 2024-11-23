@@ -3,7 +3,7 @@ import os
 import logging
 import time
 import subprocess
-from pillow import Image,ImageDraw,ImageFont
+from PIL import Image,ImageDraw,ImageFont
 import traceback
 from ctypes import *
 
