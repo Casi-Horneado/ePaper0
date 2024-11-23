@@ -33,7 +33,7 @@ this project is absolutely not complete.
 
 1. ssh into RP0WH
 
-2. use this setup.sh file `sh setup.sh`
+2. use this setup.sh file (copy & paste from below) `sh setup.sh`
 
 ```
 #! /bin/bash
@@ -50,26 +50,22 @@ sudo reboot
 ```
 
 
-upon restart & ssh in, run the config.sh file `sh config.sh`
+upon restart & ssh in. run these lines of code in terminal:
 
 ```
-#! /bin/bash
-VENV_NAME = 'epaper-venv'
-
 cd projects/ePaper0
-python3 -m venv $VENV_NAME
-
-source $VENV_NAME/bin/activate
+python3 -m venv epaper-venv # VERY slow on RP0WH
+source epaper-venv/bin/activate
+python3 -m pip install -r code/requirements.txt
 
 sudo apt-get -y install libtiff5-dev libjpeg-dev libopenjp2-7-dev zlib1g-dev \
     libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python3-tk \
     libharfbuzz-dev libfribidi-dev libxcb1-dev \
     python3-dev python3-setuptools
 
-python3 -m pip install -r code/requirements.txt
-
-cp /usr/lib/python3/dist-packages/lgpio.py $VENV_NAME/lib/python3.11/site-packages/
-cp /usr/lib/python3/dist-packages/_lgpio.cpython-311-arm-linux-gnueabihf.so  $VENV_NAME/lib/python3.11/site-packages/
+cp /usr/lib/python3/dist-packages/lgpio.py epaper-venv/lib/python3.11/site-packages/
+cp /usr/lib/python3/dist-packages/_lgpio.cpython-311-arm-linux-gnueabihf.so  epaper-venv/lib/python3.11/site-packages/
 ```
 
-now run `python3 code/display.py`
+from the `code` directory run `python3 display.py`
+## ADDITION: upload a jpeg
