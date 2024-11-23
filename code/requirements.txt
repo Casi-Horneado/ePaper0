@@ -1,0 +1,4 @@
+colorzero==2.0
+gpiozero==2.0.1
+Pillow==9.0.1
+spidev==3.6
