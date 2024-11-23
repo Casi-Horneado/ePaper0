@@ -66,11 +66,10 @@ sudo apt-get -y install libtiff5-dev libjpeg-dev libopenjp2-7-dev zlib1g-dev \
     libharfbuzz-dev libfribidi-dev libxcb1-dev \
     python3-dev python3-setuptools
 
-python3 -m pip install 'Pillow==9.0.1'
-python3 -m pip install 'spidev==3.6'
-python3 -m pip install 'gpiozero==2.0.1'
-
+python3 -m pip install -r code/requirements.txt
 
 cp /usr/lib/python3/dist-packages/lgpio.py $VENV_NAME/lib/python3.11/site-packages/
 cp /usr/lib/python3/dist-packages/_lgpio.cpython-311-arm-linux-gnueabihf.so  $VENV_NAME/lib/python3.11/site-packages/
 ```
+
+now run `python3 code/display.py`
